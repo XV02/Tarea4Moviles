@@ -1,16 +1,29 @@
-# crypto_look
+# Tarea 4 | Crypto look
 
-A new Flutter project.
+- List View
+- List Tile
+- Cargar datos de un JSON
+- Navigator
+- Paso de datos a una página
 
-## Getting Started
+## Lo que me costo mas trabajo
 
-This project is a starting point for a Flutter application.
+- La comprobación de cada dato en el lugar correcto para el buen funcionamiento de la app sin errores
 
-A few resources to get you started if this is your first Flutter project:
+## Lo que aprendí
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- Navigator
+- Validación de datos en Flutter
+- Paso de datos a una página y widget
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Screenshots de la app
+![imagen](https://github.com/XV02/Tarea4Moviles/assets/29586921/d60629e0-a0f1-4136-a1b4-ba62ec6b5447)
+
+![imagen](https://github.com/XV02/Tarea4Moviles/assets/29586921/a995031e-e432-47dd-bbd4-34ed112d3132)
+
+![imagen](https://github.com/XV02/Tarea4Moviles/assets/29586921/a19ebb9b-c35c-4713-9017-2e13089815b8)
+
+
+
+
+
