@@ -1,32 +1,36 @@
+import 'dart:convert';
+
+import 'package:crypto_look/crypto_list.dart';
+import 'package:crypto_look/data/constants.dart';
 import 'package:flutter/material.dart';
 
-class HomePage extends StatelessWidget {
-  final List<String> misColores = [
-    'Rojo',
-    'Verde',
-    'Azul',
-    'Amarillo',
-    'Naranja'
-  ];
-
-  HomePage({
+class HomePage extends StatefulWidget {
+  const HomePage({
     super.key,
   });
+
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  List<dynamic> cryptoData = [];
+
+  @override
+  void initState() {
+    cryptoData = jsonDecode(cryptoExchanges);
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Material App Bar'),
+        title: const Text('Crypto Look'),
+        backgroundColor: Colors.blueAccent,
+        foregroundColor: Colors.white,
       ),
-      body: ListView.builder(
-        itemCount: misColores.length,
-        itemBuilder: (BuildContext context, int index) {
-          return ListTile(
-            title: Text(misColores[index]),
-          );
-        },
-      ),
+      body: CryptoList(cryptoData: cryptoData),
     );
   }
 }

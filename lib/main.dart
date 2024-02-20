@@ -8,8 +8,8 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Material App',
+    return const MaterialApp(
+      title: 'Crypyo Look',
       home: HomePage(),
     );
   }
