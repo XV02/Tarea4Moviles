@@ -1,3 +1,4 @@
+import 'package:crypto_look/details_page.dart';
 import 'package:flutter/material.dart';
 
 class CryptoList extends StatelessWidget {
@@ -19,6 +20,16 @@ class CryptoList extends StatelessWidget {
             cryptoData[index]['year_established'] ?? 'N/A';
         cryptoData[index]['country'] = cryptoData[index]['country'] ?? 'N/A';
         return ListTile(
+            onTap: () {
+              Navigator.of(context).push(MaterialPageRoute(
+                  builder: (context) => DetailsPage(
+                        description: cryptoData[index]['description'],
+                        image: cryptoData[index]['image_url'] ?? '',
+                        name: cryptoData[index]['name'],
+                        year: cryptoData[index]['year_established'],
+                        logoUrl: cryptoData[index]['image'],
+                      )));
+            },
             leading: (cryptoData[index]['image'] != null)
                 ? Image.network(cryptoData[index]['image'])
                 : const Icon(
