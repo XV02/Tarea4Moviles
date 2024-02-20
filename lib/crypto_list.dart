@@ -18,22 +18,13 @@ class CryptoList extends StatelessWidget {
         cryptoData[index]['year_established'] =
             cryptoData[index]['year_established'] ?? 'N/A';
         cryptoData[index]['country'] = cryptoData[index]['country'] ?? 'N/A';
-        if (cryptoData[index]['image'] == null) {
-          return ListTile(
-            leading: const Icon(Icons.error),
-            title: Text(cryptoData[index]['name']),
-            subtitle: Text(
-              '${cryptoData[index]['country']}\n${cryptoData[index]['year_established']}',
-            ),
-            trailing: CircleAvatar(
-              backgroundColor: Colors.black,
-              foregroundColor: Colors.white,
-              child: Text(cryptoData[index]['trust_score'].toString()),
-            ),
-          );
-        }
         return ListTile(
-            leading: Image.network(cryptoData[index]['image']),
+            leading: (cryptoData[index]['image'] != null)
+                ? Image.network(cryptoData[index]['image'])
+                : const Icon(
+                    Icons.error,
+                    size: 50,
+                  ),
             title: Text(cryptoData[index]['name']),
             // The subtitle is the country an line jump and the year
             subtitle: Text(
